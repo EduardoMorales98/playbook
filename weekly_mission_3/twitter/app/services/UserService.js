@@ -4,12 +4,12 @@ class UserService{
         return new User(id, username, name, "Sin bio")
     }
 
-    static getInfo(usuario){
-        return Object.values(usuario)
-    }
-
     static updateUsername(usuario,nuevoUserName){
         usuario.setUsername=nuevoUserName
+    }
+
+    static getInfo(usuario){
+        return Object.values(usuario)
     }
 
     static getAllUsernames(usernames){
