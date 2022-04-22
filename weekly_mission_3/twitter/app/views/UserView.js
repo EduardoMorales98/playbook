@@ -5,11 +5,16 @@ class UserView{
         if(payload==null){
             var resultado={
                 error: "payload no existe"
-            }
-            return resultado    
+            }  
         }
-        else
-        this.payload=payload
+        else if(payload.username==null||payload.name==null||payload.id==null){
+            var resultado={
+                error: "necesitan tener un valor válido"
+            }   
+        }
+
+        return resultado 
+        //this.payload=payload
     }
 
 }
