@@ -14,7 +14,16 @@ app.get('/v1/explorers',(req,res)=>{
     const explorer3={id:3,name:"Eduardo3"}
     const explorer4={id:4,name:"Eduardo4"}
     const explorers=[explorer1,explorer2,explorer3,explorer4]
+    //HTTP CODE STATUS: 200
     res.status(200).json(explorers)
+})
+
+app.get('/v1/explorers/:id',(req,res)=>{
+    console.log(`Api Explorers GET request ${new Date()}`)
+    console.log(`Getting explorers with id: ${req.params.id}`)
+    const explorer={id:1,name:"Eduardo"}
+    //HTTP CODE STATUS: 200
+    res.status(200).json(explorer)
 })
 
 // Con esto inicializamos esta app
